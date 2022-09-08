@@ -113,7 +113,7 @@ body {
     /* line-height:calc(var(--clock-font-size)); */
     visibility:hidden;
     transform-origin: 0 100%;
-    animation: numFlip1 .5s forwards;
+    animation: numFlip1 .15s ease-in-out both;
 }
 .hours-bottom-static, 
 .minutes-bottom-static, 
@@ -129,8 +129,8 @@ body {
  .amPm-bottom-card{
     visibility:hidden;
     transform-origin: 100% 0;
-    animation: numFlip2 .5s forwards;
-    animation-delay: .5s;
+    animation: numFlip2 .15s ease-in-out both;
+    animation-delay: .15s;
  }
 
  .colon{
@@ -148,7 +148,7 @@ body {
   @keyframes numFlip2 {
     0% {visibility:visible;  
         transform: rotateX(90deg);
-        z-index: 999;}
+        z-index: 99;}
   }
 
 
