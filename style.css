@@ -1,4 +1,84 @@
+:root{
+    --clock-font-size:300px;
+    --line-height-top:121%;
+    --line-height-bottom:14%;
+}
+
 body {
     color: lightblue;
-    background-color: black;
+    background-color:rgb(28, 27, 35);
+    font-family:'Teko', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.clock{
+    display:grid;
+    grid-template-columns: 2fr 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    margin: auto;
+    padding:2%;
+    background-color:darkslateblue;
+    max-width:90%;
+    width: 1200px;
+    height: 20rem;
+    vertical-align: auto;
  }
+
+ .clock div{
+    background: linear-gradient(160deg, 
+                rgb(18, 18, 18) 25%, 
+                black 70%);
+    font-size:var(--clock-font-size);
+    color:whitesmoke;
+    font-weight:700;
+    text-align: center;
+    margin: 1px 1%;
+    box-shadow: 0 2px 6px 0 black;
+    overflow:hidden;
+ }
+
+ .top{
+    /* line-height:calc(var(--clock-font-size)); */
+    line-height:var(--line-height-top);
+ }
+
+ .bottom{
+    line-height:var(--line-height-bottom);
+ }
+
+ .colon{
+    grid-row:1/3;
+    grid-column: 2;
+    line-height: var(--clock-font-size);
+ }
+
+ @media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+:root{
+    --clock-font-size:200px;
+    --line-height-top:173%;
+    --line-height-bottom:14%;
+}
+.clock{
+    width: 800px;
+}
+.colon{
+    line-height: 320px;
+}
+}
+@media only screen and (max-width: 850px){
+	/*Big smartphones [426px -> 600px]*/
+    :root{
+        --clock-font-size:130px;
+        --line-height-top:257%;
+        --line-height-bottom:15%;
+    }
+
+}
+@media only screen and (max-width: 525px){
+	/*Small smartphones [325px -> 425px]*/
+    :root{
+        --clock-font-size:90px;
+        --line-height-top:366%;
+        --line-height-bottom:15%;
+    }
+}
