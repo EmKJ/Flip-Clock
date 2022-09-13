@@ -14,12 +14,12 @@ body {
     display:grid;
     grid-template-columns: 2fr 1fr 2fr 2fr;
     grid-template-rows: 1fr 1fr;
-    margin: auto;
+    margin: 100px auto;
     padding:2%;
-    background-color:darkslateblue;
+    background-color:rgb(67, 65, 80);
     max-width:90%;
     width: 1200px;
-    height: 20rem;
+    height: 320px;
     vertical-align: auto;
     /* make the blinking cursor invisible */
     /* caret-color: transparent; */
@@ -38,66 +38,25 @@ body {
     color:whitesmoke;
     font-weight:700;
     text-align: center;
-    margin: 1px 1%;
+    margin: 1px .5rem;
     box-shadow: 0 2px 6px 0 black;
     overflow:hidden;
    
  }
-  .hours-top-card{
- grid-row:1/2;
- grid-column: 1/2;
- }
- .hours-top-static{
-    grid-row:1/2;
-    grid-column: 1/2;
-    z-index: -1;
- }
- .minutes-top-card{
- grid-row:1;
- grid-column: 3;
- }
- .minutes-top-static{
- grid-row:1;
- grid-column: 3;
- z-index: -1;
- }
- .amPm-top-card{
- grid-row:1;
- grid-column: 4;
- }
- .amPm-top-static{
- grid-row:1;
- grid-column: 4;
- z-index: -1;
- }
- .hours-bottom-card{
- grid-row:2;
- grid-column: 1;
- }
- .hours-bottom-static{
- grid-row:2;
- grid-column: 1;
- z-index: -1;
- }
- .minutes-bottom-card{
- grid-row:2;
- grid-column: 3;
- }
- .minutes-bottom-static{
- grid-row:2;
- grid-column: 3;
- z-index: -1;
- }
- .amPm-bottom-card{
- grid-row:2;
- grid-column: 4;
- }
- .amPm-bottom-static{
- grid-row:2;
- grid-column: 4;
- z-index: -1;
- }
- 
+
+.hours-top-card{grid-row:1/2;grid-column: 1/2;}
+.hours-top-static{grid-row:1/2;grid-column: 1/2;z-index: -1; }
+.minutes-top-card{grid-row:1;grid-column: 3;}
+.minutes-top-static{grid-row:1; grid-column: 3;z-index: -1;}
+.amPm-top-card{grid-row:1;grid-column: 4;}
+.amPm-top-static{grid-row:1;grid-column: 4;z-index: -1;}
+
+.hours-bottom-card{grid-row:2;grid-column: 1;}
+.hours-bottom-static{grid-row:2;grid-column: 1;z-index: -1;}
+.minutes-bottom-card{grid-row:2;grid-column: 3;}
+.minutes-bottom-static{grid-row:2;grid-column: 3; z-index: -1;}
+.amPm-bottom-card{grid-row:2;grid-column: 4;}
+.amPm-bottom-static{grid-row:2;grid-column: 4; z-index: -1;}
  
 .hours-top-static, 
 .minutes-top-static, 
@@ -110,8 +69,8 @@ body {
  .hours-top-card,
  .minutes-top-card,
  .amPm-top-card{
-    /* line-height:calc(var(--clock-font-size)); */
     visibility:hidden;
+    box-shadow:none;
     transform-origin: 0 100%;
     animation: numFlip1 .15s ease-in-out both;
 }
@@ -122,12 +81,12 @@ body {
 .minutes-bottom-card, 
 .amPm-bottom-card {
      line-height:var(--line-height-bottom);
-     color:green;
  }
  .hours-bottom-card,
  .minutes-bottom-card,
  .amPm-bottom-card{
     visibility:hidden;
+    box-shadow:none;
     transform-origin: 100% 0;
     animation: numFlip2 .15s ease-in-out both;
     animation-delay: .15s;
